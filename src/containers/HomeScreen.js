@@ -38,7 +38,7 @@ export default class HomeScreen extends Component<Props> {
         <Button
         title="Go to Jane's profile"
         onPress={() =>
-          navigate('Profile', { name: 'Jane' })
+          navigate('Login', { name: 'Jane' })
         }
         />
       </View>

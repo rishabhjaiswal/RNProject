@@ -1,21 +1,21 @@
 import { AppRegistry } from 'react-native';
-import App from './src/App';
+import AppNavigator from './src/AppNavigator';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-
+import AppReducer from './src/reducers/index';
 
 
 class MainApp extends React.Component {
 
   render() {
-      const store = createStore();
+      const store = createStore( AppReducer );
       return (
       <Provider store={store}>
-        <App />
+        <AppNavigator />
       </Provider>
       );
   }
 }
 
-AppRegistry.registerComponent('AwsomeProject', () => App);
+AppRegistry.registerComponent('AwsomeProject', () => MainApp);
